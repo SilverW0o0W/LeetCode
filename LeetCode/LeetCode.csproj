@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Palindrome Number\Palindrome Number.csproj">
+      <Project>{8f7a68c0-3809-4f11-bd66-fb90ca94b9cf}</Project>
+      <Name>Palindrome Number</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Reverse Integer\Reverse Integer.csproj">
       <Project>{8fdddc84-e409-4e45-9e6a-9becc89066f5}</Project>
       <Name>Reverse Integer</Name>
