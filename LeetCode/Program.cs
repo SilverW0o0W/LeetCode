@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 
 //using Two_Sum;
-using Reverse_Integer;
+//using Reverse_Integer;
+using Palindrome_Number;
 
 namespace LeetCode
 {
@@ -15,7 +16,6 @@ namespace LeetCode
         static void Main(string[] args)
         {
             Solution solution = new Solution();
-            int a = solution.Reverse(-2147483648);
             Console.WriteLine();
         }
     }

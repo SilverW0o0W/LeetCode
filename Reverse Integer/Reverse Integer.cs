@@ -8,6 +8,7 @@ namespace Reverse_Integer
 {
     public class Solution
     {
+        //https://leetcode.com/problems/reverse-integer
         public int Reverse_Self(int x)
         {
             if (x == 0 || x > int.MaxValue || x <= int.MinValue) return 0;
