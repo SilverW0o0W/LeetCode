@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace Reverse_Integer
 {
+    //https://leetcode.com/problems/reverse-integer
+    /*
+     * Reverse digits of an integer.
+     * Example1: x = 123, return 321
+     * Example2: x = -123, return -321
+     * 
+     * Note:
+     * The input is assumed to be a 32-bit signed integer. Your function should return 0 when the reversed integer overflows.
+     */
+
     public class Solution
     {
-        //https://leetcode.com/problems/reverse-integer
         public int Reverse_Self(int x)
         {
             if (x == 0 || x > int.MaxValue || x <= int.MinValue) return 0;

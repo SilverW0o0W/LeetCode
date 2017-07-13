@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace Palindrome_Number
 {
+    //https://leetcode.com/problems/palindrome-number
+    /*
+     * Determine whether an integer is a palindrome. Do this without extra space.
+     */
     public class Solution
     {
-        //https://leetcode.com/problems/palindrome-number
         public bool IsPalindrome(int x)
         {
             if (x < 0 || (x != 0 && x % 10 == 0)) return false;
