@@ -50,21 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Palindrome Number\Palindrome Number.csproj">
-      <Project>{8f7a68c0-3809-4f11-bd66-fb90ca94b9cf}</Project>
-      <Name>Palindrome Number</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Reverse Integer\Reverse Integer.csproj">
-      <Project>{8fdddc84-e409-4e45-9e6a-9becc89066f5}</Project>
-      <Name>Reverse Integer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Roman to Integer\Roman to Integer.csproj">
-      <Project>{ac09631f-659a-4282-bb5b-7755899d9105}</Project>
-      <Name>Roman to Integer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Two Sum\Two Sum.csproj">
-      <Project>{2A6F4530-EDE4-4F71-A03F-7BF17D15FE2F}</Project>
-      <Name>Two Sum</Name>
+    <ProjectReference Include="..\Longest Common Prefix\Longest Common Prefix.csproj">
+      <Project>{dcb8c60a-d16c-4be4-8adc-1b8a65f3b22f}</Project>
+      <Name>Longest Common Prefix</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
