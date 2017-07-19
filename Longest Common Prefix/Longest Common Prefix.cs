@@ -12,12 +12,48 @@ namespace Longest_Common_Prefix
         /*
          * Write a function to find the longest common prefix string amongst an array of strings.
          */
-        public string LongestCommonPrefix(string[] strs)
+
+        public string LongestCommonPrefix_Self(string[] strs)
         {
-            for (int i = 0; i < strs[0].Length; i++)
+            string minString = string.Empty;
+            int minLength = int.MaxValue;
+            minString = string.Empty;
+            string prefix = string.Empty;
+            foreach (string str in strs)
             {
-                char c = strs[0][i];
+                if (str.Length < minLength)
+                {
+                    minLength = str.Length;
+                    minString = str;
+                }
             }
+            string result = GetPrefix(strs, minString, 0, minString.Length);
+            return result;
+        }
+
+        private string GetPrefix(string[] strs, string minString, int prefixLength, int change)
+        {
+            if (change == 0 || prefixLength == minString.Length)
+            {
+                return minString.Substring(0, prefixLength);
+            }
+
+            bool isCommonPrefix = true;
+            string input = minString.Substring(0, prefixLength + change);
+            foreach (string str in strs)
+            {
+                if ((str.Length <= input.Length && str != input) || !str.StartsWith(input))
+                {
+                    isCommonPrefix = false;
+                    break;
+                }
+            }
+            if (isCommonPrefix)
+            {
+                prefixLength = input.Length;
+            }
+            change = change % 2 == 0 || change == 1 ? change / 2 : (change + 1) / 2;
+            return GetPrefix(strs, minString, prefixLength, change);
         }
     }
 }
