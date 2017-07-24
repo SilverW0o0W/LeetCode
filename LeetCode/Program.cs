@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 //using Palindrome_Number;
 //using Roman_to_Integer;
 //using Longest_Common_Prefix;
-using Valid_Parentheses;
+//using Valid_Parentheses;
+using Merge_Two_Sorted_Lists;
 
 namespace LeetCode
 {
@@ -19,6 +20,7 @@ namespace LeetCode
         static void Main(string[] args)
         {
             Solution solution = new Solution();
+            solution.Run();
             Console.WriteLine();
         }
     }
