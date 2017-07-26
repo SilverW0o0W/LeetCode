@@ -12,7 +12,8 @@ using System.Threading.Tasks;
 //using Longest_Common_Prefix;
 //using Valid_Parentheses;
 //using Merge_Two_Sorted_Lists;
-using Remove_Duplicates_from_Sorted_Array;
+//using Remove_Duplicates_from_Sorted_Array;
+using Remove_Element;
 
 namespace LeetCode
 {
