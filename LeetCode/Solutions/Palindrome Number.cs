@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Palindrome_Number
+namespace LeetCode.Palindrome_Number
 {
     //https://leetcode.com/problems/palindrome-number
     /*

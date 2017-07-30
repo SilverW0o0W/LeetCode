@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Search_Insert_Position
+namespace LeetCode.Search_Insert_Position
 {
     //https://leetcode.com/problems/search-insert-position
     /*

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Longest_Common_Prefix
+namespace LeetCode.Longest_Common_Prefix
 {
     public class Solution
     {
@@ -54,6 +54,11 @@ namespace Longest_Common_Prefix
             }
             change = change % 2 == 0 || change == 1 ? change / 2 : (change + 1) / 2;
             return GetPrefix(strs, minString, prefixLength, change);
+        }
+
+        public void Run()
+        {
+
         }
     }
 }

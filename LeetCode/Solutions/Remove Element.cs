@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remove_Element
+namespace LeetCode.Remove_Element
 {
     //https://leetcode.com/problems/remove-element
     /*

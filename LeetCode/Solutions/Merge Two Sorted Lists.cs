@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Merge_Two_Sorted_Lists
+namespace LeetCode.Merge_Two_Sorted_Lists
 {
     //https://leetcode.com/problems/merge-two-sorted-lists
     /*

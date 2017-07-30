@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remove_Duplicates_from_Sorted_Array
+namespace LeetCode.Remove_Duplicates_from_Sorted_Array
 {
     //https://leetcode.com/problems/remove-duplicates-from-sorted-array
     /*

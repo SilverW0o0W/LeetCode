@@ -43,8 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Longest Common Prefix.cs" />
+    <Compile Include="Merge Two Sorted Lists.cs" />
+    <Compile Include="Palindrome Number.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remove Duplicates from Sorted Array.cs" />
+    <Compile Include="Remove Element.cs" />
+    <Compile Include="Reverse Integer.cs" />
+    <Compile Include="Roman to Integer.cs" />
+    <Compile Include="Search Insert Position.cs" />
+    <Compile Include="Two Sum.cs" />
+    <Compile Include="Valid Parentheses.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -54,6 +64,9 @@
       <Project>{f23d9888-6685-4107-9cf4-3815adb38dbd}</Project>
       <Name>Search Insert Position</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Two_Sum
+namespace LeetCode.Two_Sum
 {
     //https://leetcode.com/problems/two-sum
     /*

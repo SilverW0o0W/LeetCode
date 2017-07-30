@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reverse_Integer
+namespace LeetCode.Reverse_integer
 {
     //https://leetcode.com/problems/reverse-integer
     /*

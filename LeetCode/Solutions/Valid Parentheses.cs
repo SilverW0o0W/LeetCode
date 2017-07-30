@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Valid_Parentheses
+namespace LeetCode.Valid_Parenttheses
 {
     //https://leetcode.com/problems/valid-parentheses
     /*

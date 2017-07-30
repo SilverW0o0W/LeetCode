@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-//using Two_Sum;
-//using Reverse_Integer;
-//using Palindrome_Number;
-//using Roman_to_Integer;
-//using Longest_Common_Prefix;
-//using Valid_Parentheses;
-//using Merge_Two_Sorted_Lists;
-//using Remove_Duplicates_from_Sorted_Array;
-//using Remove_Element;
-using Search_Insert_Position;
+//using LeetCode.Two_Sum;
+//using LeetCode.Reverse_Integer;
+//using LeetCode.Palindrome_Number;
+//using LeetCode.Roman_to_Integer;
+//using LeetCode.Longest_Common_Prefix;
+//using LeetCode.Valid_Parentheses;
+//using LeetCode.Merge_Two_Sorted_Lists;
+//using LeetCode.Remove_Duplicates_from_Sorted_Array;
+//using LeetCode.Remove_Element;
+using LeetCode.Search_Insert_Position;
 
 namespace LeetCode
 {
