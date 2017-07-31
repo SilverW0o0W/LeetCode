@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Solutions\Longest Common Prefix.cs" />
+    <Compile Include="Solutions\Longest Substring Without Repeating Characters.cs" />
     <Compile Include="Solutions\Merge Two Sorted Lists.cs" />
     <Compile Include="Solutions\Palindrome Number.cs" />
     <Compile Include="Program.cs" />
