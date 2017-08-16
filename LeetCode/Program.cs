@@ -20,7 +20,8 @@ using System.Threading.Tasks;
 //using LeetCode.Median_of_Two_Sorted_Arrays;
 //using LeetCode.Longest_Palindromic_Substring;
 //using LeetCode.ZigZag_Conversion;
-using LeetCode.Regular_Expression_Matching;
+//using LeetCode.Regular_Expression_Matching;
+using LeetCode.Implement_strStr;
 
 namespace LeetCode
 {

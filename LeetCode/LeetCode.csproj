@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solutions\Implement strStr%28%29.cs" />
     <Compile Include="Solutions\Longest Common Prefix.cs" />
     <Compile Include="Solutions\Longest Palindromic Substring.cs" />
     <Compile Include="Solutions\Longest Substring Without Repeating Characters.cs" />
