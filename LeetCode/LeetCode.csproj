@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solutions\3Sum.cs" />
     <Compile Include="Solutions\Implement strStr%28%29.cs" />
     <Compile Include="Solutions\Integer to Roman.cs" />
     <Compile Include="Solutions\Longest Common Prefix.cs" />
