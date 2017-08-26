@@ -22,55 +22,7 @@ namespace LeetCode.Three_Sum
          */
         public IList<IList<int>> ThreeSum(int[] nums)
         {
-            IList<IList<int>> result = new List<IList<int>>();
-            Hashtable hashtable = new Hashtable();
-            Array.Sort(nums);
-
-            for (int i = 0; i < nums.Length; i++)
-            {
-                for (int j = i + 1; j < nums.Length; j++)
-                {
-                    KeyValuePair<int, int> pair = new KeyValuePair<int, int>(nums[i], nums[j]);
-                    AddToTable(hashtable, nums[i] + nums[j], pair);
-                }
-            }
-
-            nums = nums.Distinct().ToArray();
-            foreach (int num in nums)
-            {
-                int negativeNum = -num;
-                if (hashtable.Contains(negativeNum))
-                {
-                    foreach (KeyValuePair<int, int> pair in hashtable[negativeNum] as Hashtable)
-                    {
-                        IList<int> list = new List<int>();
-                        list.Add(pair.Key);
-                        list.Add(pair.Value);
-                        list.Add(num);
-                        result.Add(list);
-                    }
-                }
-            }
-            return result;
-        }
-
-        private void AddToTable(Hashtable hashtable, int key, KeyValuePair<int, int> pair)
-        {
-            Hashtable hashtableTemp;
-            if (hashtable.ContainsKey(key))
-            {
-                hashtableTemp = hashtable[key] as Hashtable;
-            }
-            else
-            {
-                hashtableTemp = new Hashtable();
-                hashtable[key] = hashtableTemp;
-            }
-            if (hashtableTemp.ContainsKey(pair.Key))
-            {
-                hashtableTemp.Add(pair.Key, pair.Value);
-            }
-
+            return null;
         }
 
         public void Run()
