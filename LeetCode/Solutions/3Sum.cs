@@ -22,7 +22,32 @@ namespace LeetCode.Three_Sum
          */
         public IList<IList<int>> ThreeSum(int[] nums)
         {
-            return null;
+            Array.Sort(nums);
+            IList<IList<int>> res = new List<IList<int>>();
+            for (int i = 0; i < nums.Length - 2; i++)
+            {
+                if (i == 0 || (i > 0 && nums[i] != nums[i - 1]))
+                {
+                    int lo = i + 1, hi = nums.Length - 1, sum = 0 - nums[i];
+                    while (lo < hi)
+                    {
+                        if (nums[lo] + nums[hi] == sum)
+                        {
+                            List<int> list = new List<int>();
+                            list.Add(nums[i]);
+                            list.Add(nums[lo]);
+                            list.Add(nums[hi]);
+                            res.Add(list);
+                            while (lo < hi && nums[lo] == nums[lo + 1]) lo++;
+                            while (lo < hi && nums[hi] == nums[hi - 1]) hi--;
+                            lo++; hi--;
+                        }
+                        else if (nums[lo] + nums[hi] < sum) lo++;
+                        else hi--;
+                    }
+                }
+            }
+            return res;
         }
 
         public void Run()
