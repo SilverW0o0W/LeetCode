@@ -57,6 +57,7 @@
     <Compile Include="Solutions\Regular Expression Matching.cs" />
     <Compile Include="Solutions\Remove Duplicates from Sorted Array.cs" />
     <Compile Include="Solutions\Remove Element.cs" />
+    <Compile Include="Solutions\Remove Nth Node From End of List.cs" />
     <Compile Include="Solutions\Reverse Integer.cs" />
     <Compile Include="Solutions\Roman to Integer.cs" />
     <Compile Include="Solutions\Search Insert Position.cs" />
