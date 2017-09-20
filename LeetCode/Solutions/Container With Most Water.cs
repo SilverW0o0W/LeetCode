@@ -17,20 +17,32 @@ namespace LeetCode.Container_With_Most_Water
 
         public int MaxArea(int[] height)
         {
-            int left = 1, right = 2;
-            int x = right - left, y = Math.Min(height[left], height[right]);
-            int maxArea = x * y;
+            int left = 0, right = height.Length - 1;
+            int maxArea = Math.Min(height[left], height[right]) * (right - left);
 
-            for (int i = 3; i < height.Length; i++)
+            while (left < right)
             {
-                if (height[right] <= height[i])
+                int x, y;
+                if (height[left] < height[right])
                 {
-                    right = i;
-                    
+                    left++;
                 }
+                else
+                {
+                    right--;
+                }
+                x = right - left;
+                y = Math.Min(height[left], height[right]);
+                int area = x * y;
+                maxArea = maxArea > area ? maxArea : area;
             }
-
             return maxArea;
+        }
+
+        public void Run()
+        {
+            int[] height = { 1, 1 };
+            int result = MaxArea(height);
         }
     }
 }
