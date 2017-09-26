@@ -20,7 +20,7 @@ namespace LeetCode.Letter_Combinations_of_a_Phone_Number
     {
         public IList<string> LetterCombinations(string digits)
         {
-            IList<string> list = new List<string>();
+            if (string.IsNullOrEmpty(digits)) return new List<string>();
             Dictionary<char, char[]> dict = new Dictionary<char, char[]>();
             dict.Add('2', new char[] { 'a', 'b', 'c' });
             dict.Add('3', new char[] { 'd', 'e', 'f' });
@@ -32,19 +32,27 @@ namespace LeetCode.Letter_Combinations_of_a_Phone_Number
             dict.Add('9', new char[] { 'w', 'x', 'y', 'z' });
             dict.Add('0', new char[] { '0' });
             dict.Add('1', new char[] { '1' });
+            Queue<string> queue = new Queue<string>();
+            queue.Enqueue(string.Empty);
             foreach (char digit in digits)
             {
-                foreach(char c in dict[digit])
+                Queue<string> tempQueue = new Queue<string>();
+                while (queue.Count > 0)
                 {
-
+                    string temp = queue.Dequeue();
+                    foreach (char c in dict[digit])
+                    {
+                        tempQueue.Enqueue(temp + c);
+                    }
                 }
+                queue = tempQueue;
             }
-            return list;
+            return queue.ToList();           
         }
 
         public void Run()
         {
-            string input = "234";
+            string input = "23";
             IList<string> list = LetterCombinations(input);
         }
     }
