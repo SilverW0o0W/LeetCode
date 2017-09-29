@@ -23,12 +23,29 @@ namespace LeetCode.Generate_Parentheses
 
         public IList<string> GenerateParenthesis(int n)
         {
-            return null;
+            IList<string> list = new List<string>();
+            Recursion(list, string.Empty, n, n);
+            return list;
+        }
+
+        public void Recursion(IList<string> list, string current, int leftRemain, int rightRemain)
+        {
+            if (leftRemain <= 0)
+            {
+                for (int i = 0; i < rightRemain; i++) current += ')';
+                list.Add(current);
+                return;
+            }
+            Recursion(list, current + '(', leftRemain - 1, rightRemain);
+            if (leftRemain < rightRemain)
+            {
+                Recursion(list, current + ')', leftRemain, rightRemain - 1);
+            }
         }
 
         public void Run()
         {
-
+            IList<string> list = GenerateParenthesis(3);
         }
     }
 }
