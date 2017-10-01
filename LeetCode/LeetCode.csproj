@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Merge k Sorted Lists.cs" />
     <Compile Include="Solutions\3Sum.cs" />
     <Compile Include="Solutions\Container With Most Water.cs" />
     <Compile Include="Solutions\Generate Parentheses.cs" />
