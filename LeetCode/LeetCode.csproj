@@ -66,6 +66,7 @@
     <Compile Include="Solutions\Roman to Integer.cs" />
     <Compile Include="Solutions\Search Insert Position.cs" />
     <Compile Include="Solutions\String to Integer%28atoi%29.cs" />
+    <Compile Include="Solutions\Swap Nodes in Pairs.cs" />
     <Compile Include="Solutions\Two Sum.cs" />
     <Compile Include="Solutions\Valid Parentheses.cs" />
     <Compile Include="Solutions\ZigZag Conversion.cs" />
