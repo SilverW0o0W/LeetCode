@@ -23,14 +23,42 @@ namespace LeetCode.Swap_Nodes_in_Pairs
     }
     public class Solution
     {
+        public ListNode SwapPairs_Self(ListNode head)
+        {
+            if (head == null) return null;
+            ListNode realHead = head.next ?? head;
+            ListNode tempHead = head;
+            ListNode tempPre = new ListNode(0);
+            while (tempHead != null && tempHead.next != null)
+            {
+                ListNode tempNext = tempHead.next;
+                tempPre.next = tempNext;
+                tempHead.next = tempNext.next;
+                tempNext.next = tempHead;
+                tempPre = tempHead;
+                tempHead = tempHead.next;
+            }
+            return realHead;
+        }
+
+
         public ListNode SwapPairs(ListNode head)
         {
-            return null;
+            if ((head == null) || (head.next == null))
+                return head;
+            ListNode n = head.next;
+            head.next = SwapPairs(head.next.next);
+            n.next = head;
+            return n;
         }
 
         public void Run()
         {
-
+            ListNode head = new ListNode(1);
+            head.next = new ListNode(2);
+            head.next.next = new ListNode(3);
+            head.next.next.next = new ListNode(4);
+            var result = SwapPairs(head);
         }
     }
 }
