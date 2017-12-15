@@ -30,33 +30,31 @@ namespace LeetCode.Divide_Two_Integers
             return i;
         }
 
-        //public int Divide(int dividend, int divisor)
-        //{
-        //    if (dividend == int.MinValue && divisor == -1) return int.MaxValue;
-        //    bool sameSignal = (dividend > 0 && divisor > 0) || (dividend < 0 && divisor < 0);
-        //    dividend = Math.Abs(dividend);
-        //    divisor = Math.Abs(divisor);
-        //    int i = RightShift(divisor, 1);
-        //    i = RightShift(dividend, i);
-        //    i = sameSignal ? i : -i;
-        //    return i;
-        //}
-
-        //public int RightShift(int input, int num)
-        //{
-        //    int i = 0;
-        //    while (input >= 2)
-        //    {
-        //        input = input >> num;
-        //        i++;
-        //    }
-        //    return i;
-        //}
+        public int Divide(int dividend, int divisor)
+        {
+            if (dividend == int.MinValue && divisor == -1) return int.MaxValue;
+            int sign = ((dividend < 0) ^ (divisor < 0)) ? -1 : 1;
+            long dvd = Math.Abs((long)dividend);
+            long dvs = Math.Abs((long)divisor);
+            int res = 0;
+            while (dvd >= dvs)
+            {
+                long temp = dvs, multiple = 1;
+                while (dvd >= (temp << 1))
+                {
+                    temp <<= 1;
+                    multiple <<= 1;
+                }
+                dvd -= temp;
+                res += (int)multiple;
+            }
+            return sign == 1 ? res : -res;
+        }
 
         public void Run()
         {
             int dividend = 2147483647, divisor = 2;
-            //int result = Divide(dividend, divisor);
+            int result = Divide(dividend, divisor);
         }
     }
 }
