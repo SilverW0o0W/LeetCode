@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,10 +34,10 @@ namespace LeetCode.Divide_Two_Integers
         public int Divide(int dividend, int divisor)
         {
             if (dividend == int.MinValue && divisor == -1) return int.MaxValue;
-            int sign = ((dividend < 0) ^ (divisor < 0)) ? -1 : 1;
+            bool sign = (dividend < 0) ^ (divisor < 0);
             long dvd = Math.Abs((long)dividend);
             long dvs = Math.Abs((long)divisor);
-            int res = 0;
+            long res = 0;
             while (dvd >= dvs)
             {
                 long temp = dvs, multiple = 1;
@@ -46,15 +47,51 @@ namespace LeetCode.Divide_Two_Integers
                     multiple <<= 1;
                 }
                 dvd -= temp;
-                res += (int)multiple;
+                res += multiple;
             }
-            return sign == 1 ? res : -res;
+            return (int)(sign ? -res : res);
         }
+
+        //public int Divide_Improve(int dividend, int divisor)
+        //{
+        //    if (dividend == int.MinValue && divisor == -1) return int.MaxValue;
+        //    int sign = ((dividend < 0) ^ (divisor < 0)) ? -1 : 1;
+        //    long dvd = Math.Abs((long)dividend);
+        //    long dvs = Math.Abs((long)divisor);
+        //    long res = 0;
+        //    bool isFirst = true;
+        //    Hashtable caches = new Hashtable();
+        //    while (dvd >= dvs)
+        //    {
+        //        long temp = dvs, multiple = 1;
+        //        if (isFirst)
+        //        {
+        //            while (dvd >= (temp << 1))
+        //            {
+        //                temp <<= 1;
+        //                multiple <<= 1;
+        //                caches.Add(multiple, temp);
+        //            }
+        //            isFirst = false;
+        //        }
+        //        else
+        //        {
+        //            while (true)
+        //            {
+        //                if (!(dvd >= (long)caches[multiple << 1])) break;
+        //                multiple <<= 1;
+        //            }
+        //        }
+        //        dvd -= temp;
+        //        res += multiple;
+        //    }
+        //    return (int)(sign == 1 ? res : -res);
+        //}
 
         public void Run()
         {
-            int dividend = 2147483647, divisor = 2;
-            int result = Divide(dividend, divisor);
+            int dividend = 2147483647, divisor = 1;
+            int result = Divide_Improve(dividend, divisor);
         }
     }
 }
