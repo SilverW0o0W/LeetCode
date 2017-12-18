@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Solutions\3Sum Closest.cs" />
     <Compile Include="Solutions\Divide Two Integers.cs" />
     <Compile Include="Solutions\Merge k Sorted Lists.cs" />
     <Compile Include="Solutions\3Sum.cs" />

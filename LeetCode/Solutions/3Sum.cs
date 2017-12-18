@@ -28,22 +28,22 @@ namespace LeetCode.Three_Sum
             {
                 if (i == 0 || (i > 0 && nums[i] != nums[i - 1]))
                 {
-                    int lo = i + 1, hi = nums.Length - 1, sum = 0 - nums[i];
-                    while (lo < hi)
+                    int low = i + 1, high = nums.Length - 1, sum = 0 - nums[i];
+                    while (low < high)
                     {
-                        if (nums[lo] + nums[hi] == sum)
+                        if (nums[low] + nums[high] == sum)
                         {
                             List<int> list = new List<int>();
                             list.Add(nums[i]);
-                            list.Add(nums[lo]);
-                            list.Add(nums[hi]);
+                            list.Add(nums[low]);
+                            list.Add(nums[high]);
                             res.Add(list);
-                            while (lo < hi && nums[lo] == nums[lo + 1]) lo++;
-                            while (lo < hi && nums[hi] == nums[hi - 1]) hi--;
-                            lo++; hi--;
+                            while (low < high && nums[low] == nums[low + 1]) low++;
+                            while (low < high && nums[high] == nums[high - 1]) high--;
+                            low++; high--;
                         }
-                        else if (nums[lo] + nums[hi] < sum) lo++;
-                        else hi--;
+                        else if (nums[low] + nums[high] < sum) low++;
+                        else high--;
                     }
                 }
             }

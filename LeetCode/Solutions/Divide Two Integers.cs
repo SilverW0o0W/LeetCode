@@ -91,7 +91,7 @@ namespace LeetCode.Divide_Two_Integers
         public void Run()
         {
             int dividend = 2147483647, divisor = 1;
-            int result = Divide_Improve(dividend, divisor);
+            int result = Divide(dividend, divisor);
         }
     }
 }
