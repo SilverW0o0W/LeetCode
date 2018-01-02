@@ -58,6 +58,7 @@
     <Compile Include="Solutions\Longest Substring Without Repeating Characters.cs" />
     <Compile Include="Solutions\Median of Two Sorted Arrays.cs" />
     <Compile Include="Solutions\Merge Two Sorted Lists.cs" />
+    <Compile Include="Solutions\Next Permutation.cs" />
     <Compile Include="Solutions\Palindrome Number.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
