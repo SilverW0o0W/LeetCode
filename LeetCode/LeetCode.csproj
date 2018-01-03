@@ -68,6 +68,7 @@
     <Compile Include="Solutions\Remove Nth Node From End of List.cs" />
     <Compile Include="Solutions\Reverse Integer.cs" />
     <Compile Include="Solutions\Roman to Integer.cs" />
+    <Compile Include="Solutions\Search in Rotated Sorted Array.cs" />
     <Compile Include="Solutions\Search Insert Position.cs" />
     <Compile Include="Solutions\String to Integer%28atoi%29.cs" />
     <Compile Include="Solutions\Swap Nodes in Pairs.cs" />
