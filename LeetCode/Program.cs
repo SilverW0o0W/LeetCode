@@ -34,7 +34,8 @@ using System.Threading.Tasks;
 //using LeetCode.ThreeSum_Closest;
 //using LeetCode.Count_and_Say;
 //using LeetCode.Next_Permutation;
-using LeetCode.Search_in_Rotated_Sorted_Array;
+//using LeetCode.Search_in_Rotated_Sorted_Array;
+using LeetCode.Combination_Sum;
 
 namespace LeetCode
 {
@@ -44,7 +45,6 @@ namespace LeetCode
         {
             Solution solution = new Solution();
             solution.Run();
-            Console.WriteLine();
         }
     }
 }
