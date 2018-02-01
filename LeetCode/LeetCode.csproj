@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Solutions\3Sum Closest.cs" />
+    <Compile Include="Solutions\Combination Sum II.cs" />
     <Compile Include="Solutions\Combination Sum.cs" />
     <Compile Include="Solutions\Count and Say.cs" />
     <Compile Include="Solutions\Divide Two Integers.cs" />
