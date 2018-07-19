@@ -48,6 +48,7 @@
     <Compile Include="Solutions\Combination Sum.cs" />
     <Compile Include="Solutions\Count and Say.cs" />
     <Compile Include="Solutions\Divide Two Integers.cs" />
+    <Compile Include="Solutions\Find First and Last Position of Element in Sorted Array.cs" />
     <Compile Include="Solutions\Maximum Subarray.cs" />
     <Compile Include="Solutions\Merge k Sorted Lists.cs" />
     <Compile Include="Solutions\3Sum.cs" />
