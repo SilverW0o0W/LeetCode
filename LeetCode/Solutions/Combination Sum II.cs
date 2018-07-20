@@ -40,18 +40,19 @@ namespace LeetCode.Combination_Sum_II
         {
             for (int i = lastIndex + 1; i < candidates.Length; i++)
             {
+                //if (lastIndex != -1 && candidates[i] == candidates[i - 1]) continue;
                 int remind = target - candidates[i];
                 if (remind == 0)
                 {
                     IList<int> newList = new List<int>(list);
                     newList.Add(candidates[i]);
                     lists.Add(newList);
+                    break;
                 }
                 else if (remind > 0)
                 {
                     IList<int> newList = new List<int>(list);
                     newList.Add(candidates[i]);
-                    //while(candidates.Length)
                     GetSum(remind, newList, i);
                 }
             }
@@ -59,8 +60,8 @@ namespace LeetCode.Combination_Sum_II
 
         public void Run()
         {
-            int[] candidates = new int[] { 2, 3, 6, 7 };
-            int target = 7;
+            int[] candidates = new int[] { 3, 1, 3, 5, 1, 1 };
+            int target = 8;
             IList<IList<int>> result = CombinationSum2(candidates, target);
         }
     }
