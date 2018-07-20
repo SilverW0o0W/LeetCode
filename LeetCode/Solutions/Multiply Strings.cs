@@ -26,7 +26,51 @@ namespace LeetCode.Multiply_Strings
 
         public string Multiply(string num1, string num2)
         {
+            var r = new int[num1.Length + num2.Length];
 
+            for (var i = num1.Length - 1; i >= 0; --i)
+                for (var j = num2.Length - 1; j >= 0; --j)
+                    r[i + j + 1] += (num1[i] - '0') * (num2[j] - '0');
+
+            for (var i = r.Length - 1; i > 0; --i)
+            {
+                r[i - 1] += r[i] / 10;
+                r[i] %= 10;
+            }
+
+            var sb = new StringBuilder();
+            for (var i = 0; i < r.Length; ++i)
+            {
+                if (sb.Length > 0 || r[i] != 0 || i == r.Length - 1)
+                    sb.Append((char)('0' + r[i]));
+            }
+
+            return sb.ToString();
+        }
+
+        public string Multiply_Self(string num1, string num2)
+        {
+            if (num1.Equals("0") || num2.Equals("0")) return "0";
+            int[] nums = new int[num1.Length + num2.Length];
+            for (int i = 0; i < num1.Length; i++)
+            {
+                for (int j = 0; j < num2.Length; j++)
+                {
+                    string n1 = num1[num1.Length - i - 1].ToString();
+                    string n2 = num2[num2.Length - j - 1].ToString();
+                    nums[i + j] += int.Parse(n1) * int.Parse(n2);
+                }
+            }
+            char[] result = new char[nums.Length];
+            int last = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int value = nums[i] + last;
+                result[i] = Convert.ToChar(value % 10 + 48);
+                last = value / 10;
+            }
+            Array.Reverse(result);
+            return new string(result).TrimStart('0');
         }
 
         public void Run()
