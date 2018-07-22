@@ -67,6 +67,7 @@
     <Compile Include="Solutions\Palindrome Number.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solutions\Permutations.cs" />
     <Compile Include="Solutions\Regular Expression Matching.cs" />
     <Compile Include="Solutions\Remove Duplicates from Sorted Array.cs" />
     <Compile Include="Solutions\Remove Element.cs" />
