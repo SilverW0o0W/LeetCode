@@ -24,36 +24,29 @@ namespace LeetCode.Combination_Sum_II
          *   [1, 1, 6]
          * ]
          */
-        private int[] candidates;
-        private IList<IList<int>> lists;
+
+
         public IList<IList<int>> CombinationSum2(int[] candidates, int target)
         {
-            lists = new List<IList<int>>();
+            IList<IList<int>> list = new List<IList<int>>();
             Array.Sort(candidates);
-            this.candidates = candidates;
-            List<int> list = new List<int>();
-            GetSum(target, list, -1);
-            return lists;
+            BackTrack(list, new List<int>(), candidates, target, 0);
+            return list;
         }
 
-        private void GetSum(int target, IList<int> list, int lastIndex)
+
+        private void BackTrack(IList<IList<int>> list, List<int> tempList, int[] nums, int remain, int start)
         {
-            for (int i = lastIndex + 1; i < candidates.Length; i++)
+            if (remain < 0) return;
+            else if (remain == 0) list.Add(new List<int>(tempList));
+            else
             {
-                //if (lastIndex != -1 && candidates[i] == candidates[i - 1]) continue;
-                int remind = target - candidates[i];
-                if (remind == 0)
+                for (int i = start; i < nums.Length; i++)
                 {
-                    IList<int> newList = new List<int>(list);
-                    newList.Add(candidates[i]);
-                    lists.Add(newList);
-                    break;
-                }
-                else if (remind > 0)
-                {
-                    IList<int> newList = new List<int>(list);
-                    newList.Add(candidates[i]);
-                    GetSum(remind, newList, i);
+                    if (i > start && nums[i] == nums[i - 1]) continue; // skip duplicates
+                    tempList.Add(nums[i]);
+                    BackTrack(list, tempList, nums, remain - nums[i], i + 1);
+                    tempList.RemoveAt(tempList.Count - 1);
                 }
             }
         }
