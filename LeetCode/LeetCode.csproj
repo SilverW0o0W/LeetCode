@@ -84,6 +84,7 @@
     <Compile Include="Solutions\Two Sum.cs" />
     <Compile Include="Solutions\Valid Parentheses.cs" />
     <Compile Include="Solutions\ZigZag Conversion.cs" />
+    <Compile Include="Solutions\Length of Last Word.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
